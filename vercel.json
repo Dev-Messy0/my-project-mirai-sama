@@ -1,3 +1,4 @@
 {
-  "bunVersion": "1.x"
+  "buildCommand": "npm install",
+  "installCommand": "npm install"
 }
