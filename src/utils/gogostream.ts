@@ -1,7 +1,7 @@
 // CODE FROM CONSUMET.TS WITH MODIFICATION CHANGES
 
 import axios from "axios";
-import { AnyNode, CheerioAPI, load } from "cheerio";
+import { Cheerio, type AnyNode } from "cheerio";
 // @ts-ignore
 import CryptoJS from "crypto-js";
 
