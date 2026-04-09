@@ -1,7 +1,8 @@
 // CODE FROM CONSUMET.TS WITH MODIFICATION CHANGES
 
 import axios from "axios";
-import { Cheerio, type AnyNode } from "cheerio";
+import { type CheerioAPI, type AnyNode } from "cheerio";
+import * as cheerio from "cheerio";
 // @ts-ignore
 import CryptoJS from "crypto-js";
 
@@ -33,7 +34,7 @@ export const extract = async (id: string) => {
     }
     throw error;
   }
-  const x$ = load(datapg);
+  const x$ = cheerio.load(datapg);
   const title = x$(".anime_video_body_cate > .anime-info > a").attr("title");
   const ani_id = x$(".anime_video_body_cate > .anime-info > a")
     ?.attr("href")
@@ -46,7 +47,7 @@ export const extract = async (id: string) => {
       "User-Agent": USER_AGENT,
     },
   });
-  const $ = load(res.data);
+  const $ = cheerio.load(res.data);
   const iframeUrls = [];
   const liElements = $("#list-server-more > ul > li");
   liElements.each((index, element) => {
