@@ -1,9 +1,10 @@
 {
   "name": "app",
   "version": "1.0.50",
-  "scripts": {
+  "scripts":{
     "start": "node src/index.ts",
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --watch src/index.ts",
+    "build": "echo 'No build needed'"
   },
   "dependencies": {
     "@consumet/extensions": "^1.8.1",
