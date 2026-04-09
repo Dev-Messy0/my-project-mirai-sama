@@ -1,8 +1,8 @@
 // CODE FROM CONSUMET.TS WITH MODIFICATION CHANGES
 
 import axios from "axios";
-import { type CheerioAPI, type AnyNode } from "cheerio";
 import * as cheerio from "cheerio";
+import { type CheerioAPI, type AnyNode } from "cheerio";
 // @ts-ignore
 import CryptoJS from "crypto-js";
 
@@ -114,7 +114,7 @@ export const extract = async (id: string) => {
 };
 
 export const generateEncryptedAjaxParams = async (
-  $: CheerioAPI,
+  $: cheerio.CheerioAPI,
   id: string
 ) => {
   const encryptedKey = CryptoJS.AES.encrypt(id, keys.key, {
