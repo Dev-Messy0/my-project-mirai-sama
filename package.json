@@ -2,7 +2,7 @@
   "name": "app",
   "version": "1.0.50",
   "scripts": {
-    "start": "bun run src/index.ts",
+    "start": "node src/index.ts",
     "dev": "bun run --watch src/index.ts"
   },
   "dependencies": {
